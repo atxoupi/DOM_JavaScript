@@ -5,8 +5,14 @@ let papelera=document.querySelectorAll("span");
 let eliminar=document.querySelectorAll("li");
 input.addEventListener("change",function (){
   ul.innerHTML+=`<li><span><i class="fa fa-trash"></i></span> ${input.value}</li>`;
+  quitarLi();
 });
+quitarLi();
 
+function quitarLi(){
+  ul=document.querySelector("ul");
+  papelera=document.querySelectorAll("span");
+  eliminar=document.querySelectorAll("li");
 
   for (let i=0;i<eliminar.length;i++){
     for(let t=0;t<papelera.length;t++){
@@ -19,3 +25,4 @@ input.addEventListener("change",function (){
       }
     }
   }
+}
